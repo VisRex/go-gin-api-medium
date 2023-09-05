@@ -4,17 +4,16 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/VisRex/go-gin-api-medium/pkg/common/models"
 )
 
 func (h handler) GetBooks(c *gin.Context) {
-	var books []models.Book
+	//var books []models.Book
+	/*
+		if result := h.DB.Find(&books); result.Error != nil {
+			c.AbortWithError(http.StatusNotFound, result.Error)
 
-	if result := h.DB.Find(&books); result.Error != nil {
-		c.AbortWithError(http.StatusNotFound, result.Error)
-
-		return
-	}
-
-	c.JSON(http.StatusOK, &books)
+			return
+		}
+	*/
+	c.JSON(http.StatusOK, "asd")
 }
